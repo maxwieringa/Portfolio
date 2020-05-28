@@ -1,5 +1,5 @@
-var i = 0; //start punt van slideshow
-var images = [];
+let i = 0; //start punt van slideshow
+let images = [];
 
 //array met images voor boscross boekje
 images[0] = 'PortfolioItems/BoscrossBoekje.png';
@@ -36,5 +36,6 @@ function changeImgNext() {
   console.log(i);
 }
 
+//Event listeners
 document.getElementById('prev').addEventListener("click", changeImgPrev);
 document.getElementById('next').addEventListener("click", changeImgNext);

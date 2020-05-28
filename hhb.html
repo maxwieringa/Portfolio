@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="max">
   <title>Portfolio Max</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -16,7 +15,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Max Wieringa</a></li>
-        <li><a href="index.html">Portfolio</a>
+        <li><a href="#PortfolioAnchor">Portfolio</a>
           <ul>
             <li><a href="hhb.html">Informatie Architectuur</a></li>
             <li><a href="#">Onepager</a></li>
@@ -29,23 +28,20 @@
     </nav>
   </header>
 
-  <main>
-    <section class="contactform">
-      <form id="contactform">
-        <h1>Neem contact op</h1>
-        <label for="naam">Naam</label>
-        <input required type="text" name="naam" id="naam">
-        <label for="e-mailadres">E-mail adres</label>
-        <input required type="email" name="e-mailadres" id="e-mailadres">
-        <label for="telefoon">Telefoon nummer</label>
-        <input required type="tel" name="telefoon" id="telefoon">
-        <textarea required rows="2" cols="20" name="bericht" id="bericht" form="contactform" placeholder="Vul hier uw bericht in..."></textarea>
-        <button type="submit">Verstuur</button>
-      </form>
+  <main class="hhbpage">
+    <section>
+      <h1>Project</h1>
+      <div class="containerhhb">
+      </div>
+    </section>
+    <section class="beschrijvinghhb">
+      <h1>Beschrijving</h1>
+      <img class="align-left slide-in" src="PortfolioItems/tekst.png" alt="tekst">
+      <img class="align-right slide-in" src="PortfolioItems/HHBMockup2.png" alt="mockup heel holland bakt">
     </section>
   </main>
 
-  <footer class="nietindex">
+  <footer>
     <h1>Max Wieringa</h1>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -64,6 +60,7 @@
       <li>@_maks.w_</li>
     </ul>
   </footer>
+  <script src="scroll.js"></script>
 </body>
 
 </html>
