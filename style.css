@@ -1,0 +1,427 @@
+*, *::before, *::after {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  background-color: lightseagreen;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+header nav ul li {
+  padding: 0.8em;
+  text-align: center;
+}
+
+header nav ul li:first-of-type {
+  grid-column: 1/-1;
+}
+
+header nav ul li a {
+  padding: 0.6em;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease-out;
+}
+
+header nav ul li a:hover {
+  background-color: darkcyan;
+}
+
+/* Dropdown menu */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  width: 217px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  text-align: left;
+  border-radius: 4px;
+}
+
+nav ul li ul li a {
+  font-size: 0.95em;
+}
+
+/* Index pagina */
+.begin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.7)),
+    url(Images/YeMountain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.begin h1 {
+  font-weight: bold;
+  font-size: 10vw;
+  color: white;
+}
+
+/* Overzicht portfolio items */
+.overzicht {
+  display: grid;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 2em;
+}
+
+.overzicht h1 {
+  grid-column: 1/-1;
+  font-weight: bold;
+  font-size: 7vw;
+  color: black;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  place-self: center;
+}
+
+.overzicht article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3em;
+  justify-items: center;
+}
+
+.overzicht article img {
+  width: 100%;
+}
+
+.overzicht article p {
+  color: black;
+  font-size: 1.25em;
+  text-align: center;
+  order: 2;
+}
+
+/* Boscross detail pagina */
+.boscross article {
+  padding-top: 6em;
+  display: grid;
+  justify-items: center;
+}
+
+.boscross article h1 {
+  text-align: center;
+  margin-bottom: 0.6em;
+  font-size: 1.5em;
+}
+
+.boscross article img {
+  height: 520px;
+  width: 337.5px;
+  z-index: -2;
+  position: relative;
+  user-select: none;
+}
+
+.boscross article button {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: .7rem;
+  background: #000000;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.boscross article p {
+  width: 300px;
+  margin: 1em 0 1em 0;
+}
+
+#prev {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+}
+
+#next {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+}
+
+/* Contact pagina */
+.contactform {
+  display: flex;
+  justify-content: center;
+  padding-top: 7em;
+}
+
+form {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  place-self: center;
+  background-color: powderblue;
+  padding: .5rem;
+}
+
+form h1 {
+  text-align: center;
+  width: 340px;
+}
+
+legend {
+  font-size: 1.3em;
+  width: 340px;
+}
+
+label {
+  text-align: left;
+  margin-top: 1rem;
+  width: 340px;
+}
+
+input {
+  line-height: 1.5rem;
+  width: 340px;
+  max-width: 400px;
+  transition: .2s;
+  background-color: white;
+  border-radius: 0.35em;
+}
+
+input:valid {
+  border-color: Lawngreen;
+}
+
+input:invalid {
+  border-color: Darkred;
+}
+
+input:focus {
+  transform: scale(1.05, 1.05);
+}
+
+textarea {
+  margin-top: 1rem;
+  font: inherit;
+  width: 340px;
+  max-width: 400px;
+  transition: .2s;
+  border-radius: 0.35em;
+  resize: vertical;
+  min-height: 4em;
+}
+
+textarea:invalid {
+  border-color: Darkred;
+}
+
+textarea:focus {
+  transform: scale(1.05, 1.05);
+}
+
+button {
+  font: inherit;
+  width: 6em;
+  font-size: 1.2em;
+  margin-top: 0.7em;
+  padding: .3rem;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  border-radius: 0.35em;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/* OverMij pagina */
+.beschrijving {
+  padding-top: 6em;
+  display: flex;
+  justify-content: center;
+}
+
+.beschrijving img {
+  width: 300px;
+  height: 400px;
+  border-radius: .5em;
+}
+
+.beschrijving p {
+  width: 300px;
+  text-align: left;
+  margin: 1em 0 1em 0;
+}
+
+/* footer */
+footer {
+  margin-top: 52em;
+  display: grid;
+  background-color: teal;
+  color: white;
+  justify-content: center;
+  grid-template-columns: 190px 185px;
+}
+
+footer.nietindex {
+  margin-top: 2em;
+}
+
+footer h1 {
+  margin: 2em 0 1em 0;
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0 0 2em 0;
+  padding: 0;
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+footer ul.info {
+  grid-column: 1/2;
+  text-align: right;
+  font-size: .7em;
+}
+
+footer ul.info2 {
+  grid-column: 2/-1;
+  text-align: left;
+  font-size: .7em;
+}
+
+footer ul li {
+  padding: 0.8em;
+}
+
+footer ul li a {
+  padding: 0.6em;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* Media queries */
+@media (min-width: 36em) {
+
+  /* Veranderingen navigatie menu */
+  header nav ul {
+    grid-template-columns: 10em 1fr 1fr 1fr;
+  }
+
+  header nav ul li:first-of-type {
+    grid-column: 1/2;
+  }
+
+  header nav ul li a {
+    font-size: 1.1em;
+  }
+
+  nav ul li ul {
+    width: 270px;
+  }
+
+  /* Veranderingen indexpagina */
+  .overzicht article p {
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  /* Veranderingen boscrosspagina */
+  .boscross article p {
+    width: 400px;
+  }
+
+  #prev {
+    left: 20%;
+  }
+
+  #next {
+    right: 20%;
+  }
+
+  /* Veranderingen footer */
+  footer {
+    margin-top: 2em;
+  }
+
+  footer ul.info {
+    font-size: 1em;
+  }
+
+  footer ul.info2 {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 54em) {
+
+  /* Veranderingen navigatie menu */
+  header nav ul {
+    grid-template-columns: 15em 1fr 1fr 1fr 2fr;
+  }
+
+  header nav ul li a {
+    font-size: 1.3em;
+  }
+
+  /* Veranderingen indexpagina */
+  .overzicht {
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  }
+
+  /* Veranderingen boscrosspagina */
+  #prev {
+    left: 30%;
+  }
+
+  #next {
+    right: 30%;
+  }
+
+  /* Veranderingen overmij pagina */
+  .beschrijving article {
+    display: flex;
+  }
+
+  .beschrijving p {
+    width: 300px;
+    margin-left: 2em;
+  }
+
+  /* Veranderingen footer */
+  footer {
+    grid-template-columns: 224px 224px;
+  }
+}
